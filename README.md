@@ -4,11 +4,12 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 * Theming via tailwindcss (dark and light modes)
 * Progressive Web Application (PWA) and service worker caching via next-pwa
-* Language detection and translation via next-intl and i18n
+* Language detection and translation via next-intl and i18n and auto-translation using TAS
 * Stripe integration via stripe.js
 * Icon library
 * OAuth provider authentication via next-auth
 * Google Analytics
+* Dependabot
 
 Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 

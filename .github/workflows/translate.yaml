@@ -17,10 +17,15 @@ jobs:
         with:
           python-version: '3.x'
 
-      - name: Install dependencies
+      - name: Clone TAS Repository
         run: |
-          pip install git+https://github.com/Uncover-F/TAS.git
-          pip install requests
+          git clone https://github.com/Uncover-F/TAS.git
+          cd TAS
+          # If TAS has any setup requirements, handle them here
+
+      - name: Install Dependencies
+        run: |
+          pip install requests  # Install other necessary Python packages
 
       - name: Prepare Translation Config
         run: |
@@ -54,8 +59,10 @@ jobs:
 
       - name: Translate files
         run: |
-          # Run TAS translation
-          tas --config tas-config.json
+          # Run TAS translation script
+          cd TAS
+          # Run the script or command provided by TAS
+          python tas_script.py --config ../tas-config.json  # Adjust according to TAS documentation
           
           # Commit and push translated files
           git config --global user.name "github-actions"
